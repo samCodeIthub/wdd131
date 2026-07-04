@@ -1,15 +1,19 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-header{
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
     width: 100%;
     height: 98px;
 }
 
-#course-title{
+#course-title {
     display: block;
     text-align: center;
     padding: 10px;
@@ -18,22 +22,28 @@ header{
     color: #fff;
 }
 
-header nav ul{
+header nav ul {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     background-color: black;
     width: 100%;
     height: 45px;
-}
-
-header nav ul a{
-    text-decoration: none;
-    color: white;
     padding: 10px;
 }
 
-main{
+header nav ul a {
+    text-decoration: none;
+    color: white;
+    
+}
+
+header nav ul a:hover {
+    color: orange;
+    
+}
+
+main {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 10px;
@@ -42,19 +52,20 @@ main{
     margin: 0 auto;
 }
 
-main h1{
+main h1 {
     text-align: center;
     grid-column: 1 / -1;
     height: 50px;
+    padding: 10px;
 }
 
 .card {
     border: 1px solid blue;
     border-radius: 10px;
-    height: 390px; 
+    height: 420px;
 }
 
-.card span{
+.card h2 {
     display: block;
     text-align: center;
     padding: 10px;
@@ -64,44 +75,46 @@ main h1{
     width: 100%;
 }
 
-.profile{
+.profile {
     display: flex;
     align-items: center;
     gap: 10px;
 }
-.profile p{
+
+.profile p {
     line-height: 25px;
     flex: 1;
 }
 
-.card h3{
+.card h3 {
     text-align: center;
     text-decoration: underline;
+    font-size: 20px;
 }
 
-.country{
+.country {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.country img{
+.country img {
     height: 100px;
     flex: 1;
 }
 
-.country p{
+.country p {
     line-height: 25px;
 }
 
-.card ul{
+.card ul {
     margin-left: 100px;
     margin-top: 50px;
     line-height: 30px;
 
 }
 
-footer{
+footer {
     width: 100%;
     height: 70px;
     display: block;
@@ -112,4 +125,3 @@ footer{
     padding: 10px;
 
 }
-
