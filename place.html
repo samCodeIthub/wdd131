@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Ghana</h1>
+    </header>
+
+
+    <main>
+        <picture>
+            <source media="(min-width: 600px)" srcset="images/elephantWide.webp">
+            <source media="(max-width: 640px)" srcset="images/elephant.webp">
+            <img src="images/elephant.webp" alt="Elephant in Mole National Park, Ghana">
+        </picture>
+
+        <div class="data">
+            <div class="dataLogo">
+                <h2>Data</h2>
+            </div>
+            
+            <ul>
+                <li><span class="label">Area:</span> <span class="value">238,533sqkm</span></li>
+                
+                <li><span class="label">Population:</span> <span class="value">~35,697,557</span></li>
+                
+                <li><span class="label">Capital:</span> <span class="value">Accra</span></li>
+                
+                <li><span class="label">Language:</span> <span class="value">English, Twi</span></li>
+                
+                <li><span class="label">Currency:</span> <span class="value">Cedis (GHS)</span></li>
+                
+                <li><span class="label">Time Zone:</span> <span class="value">GMT (UTC+0)</span></li>
+                
+                <li><span class="label">Calling Code:</span> <span class="value">+233</span></li>
+                
+                <li><span class="label">Internet TLD:</span> <span class="value">.gh</span></li>
+            </ul>
+        </div>
+        
+        <div class="weather">
+            <div class="weatherLogo">
+                <h2>Weather</h2>
+                
+                <img src="images/weather.svg" alt="weather">
+            </div>
+            
+
+            <ul>
+                <li><span class="label">Temperature:</span> <span class="value">10°C</span></li>
+                
+                <li><span class="label">Conditions:</span> <span class="value">Partly Cloudy</span></li>
+                
+                <li><span class="label">Wind:</span> <span class="value">5 km/h</span></li>
+                
+                <li><span class="label">Wind Chill:</span> <span class="value" id="windChill">9.8 °C</span></li>
+            </ul>
+        </div>
+    </main>
+
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span><span>👌Samuel Motey Howard👌 Ghana</span></p>
+        <p>Last Modified <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>
