@@ -9,9 +9,7 @@
 
     main {
         position: relative;
-        
     }
-
 
     main .data {
         position: absolute;
@@ -53,6 +51,23 @@
     main .data .dataLogo h2,
     main .weather .weatherLogo h2 {
         color: #fff;
-        
     }
+
+    main .weather .weatherLogo img {
+        display: none;
+    }
+            
+  
+    main .weather .weatherLogo h2::after {
+        content: " ⛅";
+        display: inline;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        margin-top: 0;
+    }
+
+    
+
+    
 }

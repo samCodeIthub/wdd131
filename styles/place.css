@@ -106,6 +106,14 @@ main .weather {
     padding-bottom: 5px;
 }
 
+/* main .weather .weatherLogo img {
+    display: none;
+}
+
+main .weather .weatherLogo h2::after {
+    content: " ⛅";
+} */
+
 footer {
     background-color: var(--colorPrimary);
     color: var(--colorBg);
