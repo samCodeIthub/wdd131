@@ -85,8 +85,14 @@ main .weather {
     color: var(--colorSecondary);
 }
 
+.data h2::after,
 .weather h2::after {
-    content: " ☀️";
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: #fcd116;
+    margin-top: 0.5rem;
 }
 
 .weather img {
