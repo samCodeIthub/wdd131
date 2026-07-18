@@ -46,9 +46,7 @@ main img {
     display: block;
 }
 
-main br {
-    display: none;
-}
+
 
 main .data,
 main .weather {
