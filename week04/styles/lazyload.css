@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    
+
+}
+
+main, footer{
+    width: 780px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+footer{
+    text-align: center;
+    padding: 30px;
+}
+
+main h1{
+    font-size: 50px;
+    text-align: center;
+}
+
+main img{
+    width: 400px;
+    height: 600px;
+    display: block;
+    flex-direction: column;
+    margin: 0 auto;
+    animation: fadeIn 1.5s ease-in-out;
+    
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        filter: brightness(0);
+    }
+
+    to {
+        opacity: 1;
+        filter: brightness(1);
+    }
+}
