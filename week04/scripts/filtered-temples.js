@@ -87,25 +87,73 @@ const temples = [
         area: 59246,
         image: "images/saopaulobrazil.jpg",
         imageUrl: "https://churchofjesuschristtemples.org/sao-paulo-brazil-temple/"
+    },
+    {
+        templeName: "Mérida Mexico Temple",
+        location: "Mérida, Mexico",
+        dedicated: "2000, July, 08",
+        area: 10700,
+        image: "images/meridaMexico.webp",
+        imageUrl: "https://churchofjesuschristtemples.org/merida-mexico-temple/"
     }
 ];
     
 
-const gallery = document.querySelector(".gallery")
+const gallery = document.querySelector(".gallery");
 
-let cards = ""
-for (const temple of temples) {
-    cards += `<figure>
-        <figcaption>
-            <h3>${temple.templeName}</h3>
-            <p><span class="label-location">Location:</span> ${temple.location}</p>
-            <p><span class="label-dedicated">Dedicated:</span> ${temple.dedicated}</p>
-            <p><span class="label-size">Size:</span> ${temple.area.toLocaleString()} sq ft</p>
-        </figcaption>
-        <a href="${temple.imageUrl}" target="_blank">
-            <img src="${temple.image}" alt="${temple.templeName}" loading="lazy">
-        </a>
-    </figure>`;
+function renderTemples(templeArray) {
+    let cards = "";
+    for (const temple of templeArray) {
+        cards += `<figure>
+            <figcaption>
+                <h3>${temple.templeName}</h3>
+                <p><span class="label-location">Location:</span> ${temple.location}</p>
+                <p><span class="label-dedicated">Dedicated:</span> ${temple.dedicated}</p>
+                <p><span class="label-size">Size:</span> ${temple.area.toLocaleString()} sq ft</p>
+            </figcaption>
+            <a href="${temple.imageUrl}" target="_blank">
+                <img src="${temple.image}" alt="${temple.templeName}" loading="lazy">
+            </a>
+        </figure>`;
+    }
+    gallery.innerHTML = cards;
 }
-    
-gallery.innerHTML = cards;
+
+renderTemples(temples);
+
+const navLinks = document.querySelectorAll("nav a");
+
+navLinks[0].addEventListener("click", function (e) {
+    e.preventDefault();
+    renderTemples(temples); // Home = show all
+});
+
+navLinks[1].addEventListener("click", function (e) {
+    e.preventDefault();
+    const oldTemples = temples.filter(temple => {
+        const year = parseInt(temple.dedicated.split(",")[0]);
+        return year < 1900;
+    });
+    renderTemples(oldTemples);
+});
+
+navLinks[2].addEventListener("click", function (e) {
+    e.preventDefault();
+    const newTemples = temples.filter(temple => {
+        const year = parseInt(temple.dedicated.split(",")[0]);
+        return year > 2000;
+    });
+    renderTemples(newTemples);
+});
+
+navLinks[3].addEventListener("click", function (e) {
+    e.preventDefault();
+    const largeTemples = temples.filter(temple => temple.area > 90000);
+    renderTemples(largeTemples);
+});
+
+navLinks[4].addEventListener("click", function (e) {
+    e.preventDefault();
+    const smallTemples = temples.filter(temple => temple.area < 10000);
+    renderTemples(smallTemples);
+});

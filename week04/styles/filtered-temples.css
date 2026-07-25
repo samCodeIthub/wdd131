@@ -19,7 +19,7 @@ header {
     height: 70px;
     display: flex;
     justify-content: space-between;
-    background-color: blueviolet;
+    background-color:#5a1e99;
     color: #fff;
     padding: 20px;
 }
@@ -101,12 +101,12 @@ figure figcaption p {
 }
 
 .label-location {
-    color: purple;
+    color: navy;
     font-weight: bold;
 }
 
 .label-dedicated {
-    color: rebeccapurple;
+    color:navy; 
     font-weight: bold;
 }
 
@@ -118,7 +118,7 @@ figure figcaption p {
 
 
 footer {
-    background-color: blueviolet;
+    background-color: #5a1e99;
     color: #fff;
     font-size: 20px;
     text-align: center;
