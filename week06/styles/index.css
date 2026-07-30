@@ -1,0 +1,193 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --indigo: #1B2A4A;
+    --gold: #E8A33D;
+    --terracotta: #C1440E;
+    --sand: #F2EFE4;
+    --ink: #22201B;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    color: var(--ink);
+    background-color: var(--sand);
+}
+
+.stripe{
+    height: 10px;
+    display: flex;
+}
+
+.stripe div{
+    flex: 1;
+}
+
+.stripe .s1{
+    background-color: var(--gold);
+    
+}
+
+.stripe .s2 {
+    background-color: var(--indigo);
+}
+
+.stripe .s3 {
+    background-color: var(--terracotta);
+}
+
+.stripe .s4 {
+    background-color: var(--ink);
+}
+
+header{
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+header .logo img{
+    width: 400px;
+    height: 100%;
+}
+
+header .nav{
+    width: 40em;
+    padding-right:20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.nav a{
+    text-decoration: none;
+    color: var(--ink);
+}
+
+
+
+main{
+    height: 800px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+main section:last-child {
+    grid-column: 1 / -1;
+}
+
+main section{
+    height: 400px;
+    padding: 30px;
+    
+}
+
+.intro h1{
+    font-weight: 700;
+    font-size: 50px;
+    color:var(--indigo);
+}
+
+.intro h1 span{
+    color:var(--terracotta);
+}
+
+.intro p{
+    color:var(--ink);
+    line-height: 30px;
+    font-size: 20px;
+}
+
+.intro button{
+    padding: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+}
+
+.intro .map{
+    background-color: var(--terracotta);
+    color: var(--sand);
+}
+
+.intro .browse{
+    border: 2px solid #1B2A4A;
+    color: var(--indigo);
+}
+
+.image img{
+    border-radius: 10px;
+    height: 340px;
+    
+}
+
+.image figcaption{
+    border-radius: 10px;
+    width: 250px;
+    padding: 10px;
+    background-color: var(--gold);
+    color: var(--ink);
+}
+
+.explore{
+    height: 200px;
+}
+
+.explore h2{
+    color: var(--indigo);
+    font-size: 30px;
+}
+
+.explore .cards{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.cards div{
+    flex: 1;
+    line-height: 25px;
+}
+
+.space{
+    border-top: 6px solid #E8A33D;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.space p{
+    font-size: 15px;
+}
+
+.space:nth-child(2){
+    border-top: 6px solid #C1440E;
+}
+
+.space:nth-child(3) {
+    border-top: 6px solid #1B2A4A;
+}
+
+.space:nth-child(4) {
+    border-top: 6px solid #22201B;
+}
+
+footer{
+    background-color: var(--indigo);
+    height: 50px;
+    color: #fff;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+}

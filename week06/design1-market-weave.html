@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Winneba Visitors Guide — Market Weave</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --indigo: #1B2A4A;
+    --gold: #E8A33D;
+    --terracotta: #C1440E;
+    --sand: #F2EFE4;
+    --ink: #22201B;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Work Sans', sans-serif; background: var(--sand); color: var(--ink); }
+
+  .stripe { height: 10px; display: flex; }
+  .stripe div { flex: 1; }
+  .stripe .s1 { background: var(--gold); }
+  .stripe .s2 { background: var(--terracotta); }
+  .stripe .s3 { background: var(--indigo); }
+
+  header { display: flex; justify-content: space-between; align-items: center; padding: 24px 48px; }
+  .logo { font-family: 'Fraunces', serif; font-weight: 700; font-size: 22px; color: var(--indigo); }
+  nav a { margin-left: 28px; text-decoration: none; color: var(--ink); font-weight: 500; font-size: 15px; }
+  nav a:hover { color: var(--terracotta); }
+
+  .hero { padding: 60px 48px 80px; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: center; }
+  .hero h1 { font-family: 'Fraunces', serif; font-weight: 700; font-size: 54px; line-height: 1.08; color: var(--indigo); }
+  .hero h1 span { color: var(--terracotta); }
+  .hero p { margin-top: 20px; font-size: 18px; color: #4a463f; max-width: 480px; line-height: 1.6; }
+  .cta-row { margin-top: 32px; display: flex; gap: 16px; }
+  .btn { padding: 14px 26px; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 15px; }
+  .btn-primary { background: var(--terracotta); color: white; }
+  .btn-secondary { background: transparent; border: 2px solid var(--indigo); color: var(--indigo); }
+
+  .hero-visual { background: var(--indigo); border-radius: 8px; height: 320px; position: relative; overflow: hidden; }
+  .hero-visual::before {
+    content: ""; position: absolute; inset: 0;
+    background: repeating-linear-gradient(45deg, var(--gold) 0 12px, transparent 12px 24px);
+    opacity: 0.15;
+  }
+  .hero-visual .tag { position: absolute; bottom: 20px; left: 20px; background: var(--gold); color: var(--indigo); font-weight: 600; padding: 8px 16px; border-radius: 4px; font-size: 14px; }
+
+  section.directory { padding: 20px 48px 80px; }
+  .directory h2 { font-family: 'Fraunces', serif; font-size: 28px; color: var(--indigo); margin-bottom: 28px; }
+  .cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .card { background: white; border-radius: 6px; padding: 24px 20px; border-top: 6px solid var(--gold); }
+  .card:nth-child(2) { border-top-color: var(--terracotta); }
+  .card:nth-child(3) { border-top-color: var(--indigo); }
+  .card:nth-child(4) { border-top-color: var(--gold); }
+  .card h3 { font-size: 17px; margin-bottom: 8px; }
+  .card p { font-size: 14px; color: #6a655c; line-height: 1.5; }
+
+  footer { background: var(--indigo); color: white; padding: 32px 48px; display: flex; justify-content: space-between; font-size: 13px; }
+  footer a { color: var(--gold); text-decoration: none; }
+</style>
+</head>
+<body>
+  <div class="stripe"><div class="s1"></div><div class="s2"></div><div class="s3"></div></div>
+
+  <header>
+    <div class="logo">Winneba Visitors Guide</div>
+    <nav>
+      <a href="#">Attractions</a>
+      <a href="#">Food & Delivery</a>
+      <a href="#">Hospitals</a>
+      <a href="#">Hostels</a>
+      <a href="#">Find Places</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1>New to Winneba?<br><span>Find your way</span> around.</h1>
+      <p>Everything a new arrival needs — where to eat, where to stay, where to get help, and what to see — all in one place.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#">Open the map</a>
+        <a class="btn btn-secondary" href="#">Browse attractions</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="tag">Aboakyer Festival · every May</div>
+    </div>
+  </section>
+
+  <section class="directory">
+    <h2>Start exploring</h2>
+    <div class="cards">
+      <div class="card"><h3>Attractions</h3><p>Winneba Beach, the Aboakyer Festival, and local landmarks worth seeing.</p></div>
+      <div class="card"><h3>Food & delivery</h3><p>Local eateries with delivery contact numbers on hand.</p></div>
+      <div class="card"><h3>Hospitals & clinics</h3><p>Nearby medical facilities, so help is never far.</p></div>
+      <div class="card"><h3>Hostels</h3><p>Places to stay for visitors and new students alike.</p></div>
+    </div>
+  </section>
+
+  <footer>
+    <span>&copy; 2026 Winneba Visitors Guide</span>
+    <a href="#">References</a>
+  </footer>
+</body>
+</html>

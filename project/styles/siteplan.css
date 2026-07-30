@@ -1,0 +1,47 @@
+:root {
+    --indigo: #1B2A4A;
+    --gold: #E8A33D;
+    --terracotta: #C1440E;
+    --sand: #F2EFE4;
+    --ink: #22201B;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--sand);
+    color: var(--ink);
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 24px;
+    line-height: 1.6;
+}
+
+h1,
+h2 {
+    color: var(--indigo);
+}
+
+h1 {
+    border-bottom: 4px solid var(--gold);
+    padding-bottom: 12px;
+}
+
+h2 {
+    margin-top: 40px;
+    border-left: 6px solid var(--terracotta);
+    padding-left: 12px;
+}
+
+section {
+    margin-bottom: 32px;
+}
+
+figure {
+    margin: 20px 0;
+}
+
+figcaption {
+    font-size: 14px;
+    color: var(--ink);
+    margin-top: 6px;
+}

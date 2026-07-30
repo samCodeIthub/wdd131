@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 480" width="100%">
+  <rect width="680" height="480" fill="#F2EFE4"/>
+
+  <rect x="0" y="0" width="680" height="6" fill="#1B2A4A"/>
+
+  <rect x="20" y="20" width="120" height="24" fill="#D8D3C4"/>
+  <rect x="380" y="24" width="60" height="16" fill="#D8D3C4"/>
+  <rect x="450" y="24" width="60" height="16" fill="#D8D3C4"/>
+  <rect x="520" y="24" width="60" height="16" fill="#D8D3C4"/>
+  <rect x="590" y="24" width="70" height="16" fill="#D8D3C4"/>
+
+  <rect x="20" y="70" width="340" height="40" fill="#B4AF9F"/>
+  <rect x="20" y="120" width="300" height="16" fill="#D8D3C4"/>
+  <rect x="20" y="144" width="300" height="16" fill="#D8D3C4"/>
+  <rect x="20" y="180" width="110" height="36" fill="#C1440E"/>
+  <rect x="140" y="180" width="110" height="36" fill="#FFFFFF" stroke="#1B2A4A"/>
+
+  <rect x="400" y="70" width="260" height="150" fill="#1B2A4A"/>
+
+  <text x="340" y="260" text-anchor="middle" font-size="13" fill="#5c574d">Category cards</text>
+  <rect x="20"  y="280" width="145" height="120" fill="#FFFFFF" stroke="#B4AF9F"/>
+  <rect x="180" y="280" width="145" height="120" fill="#FFFFFF" stroke="#B4AF9F"/>
+  <rect x="340" y="280" width="145" height="120" fill="#FFFFFF" stroke="#B4AF9F"/>
+  <rect x="500" y="280" width="160" height="120" fill="#FFFFFF" stroke="#B4AF9F"/>
+
+  <rect x="0" y="430" width="680" height="50" fill="#1B2A4A"/>
+  <rect x="20" y="450" width="140" height="12" fill="#8a8676"/>
+  <rect x="600" y="450" width="60" height="12" fill="#E8A33D"/>
+</svg>

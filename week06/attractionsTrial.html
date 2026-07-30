@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Attractions — Winneba Visitors Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --indigo: #1B2A4A;
+    --gold: #E8A33D;
+    --terracotta: #C1440E;
+    --sand: #F2EFE4;
+    --ink: #22201B;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Work Sans', sans-serif; background: var(--sand); color: var(--ink); }
+
+  .stripe { height: 10px; display: flex; }
+  .stripe div { flex: 1; }
+  .stripe .s1 { background: var(--gold); }
+  .stripe .s2 { background: var(--terracotta); }
+  .stripe .s3 { background: var(--indigo); }
+
+  header { display: flex; justify-content: space-between; align-items: center; padding: 24px 48px; }
+  .logo { font-family: 'Fraunces', serif; font-weight: 700; font-size: 22px; color: var(--indigo); text-decoration: none; }
+  nav a { margin-left: 28px; text-decoration: none; color: var(--ink); font-weight: 500; font-size: 15px; }
+  nav a:hover { color: var(--terracotta); }
+  nav a.active { color: var(--terracotta); border-bottom: 2px solid var(--terracotta); padding-bottom: 4px; }
+
+  .page-hero { padding: 50px 48px 40px; }
+  .page-hero h1 { font-family: 'Fraunces', serif; font-weight: 700; font-size: 42px; color: var(--indigo); }
+  .page-hero p { margin-top: 14px; font-size: 17px; color: #4a463f; max-width: 560px; line-height: 1.6; }
+
+  main { padding: 10px 48px 80px; }
+  .attraction-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; margin-top: 20px; }
+
+  .attraction-card { background: white; border-radius: 6px; overflow: hidden; border-top: 6px solid var(--gold); }
+  .attraction-card:nth-child(2) { border-top-color: var(--terracotta); }
+  .attraction-card:nth-child(3) { border-top-color: var(--indigo); }
+  .attraction-card:nth-child(4) { border-top-color: var(--gold); }
+
+  .attraction-img {
+    height: 180px;
+    background: var(--indigo);
+    position: relative;
+  }
+  .attraction-img::before {
+    content: ""; position: absolute; inset: 0;
+    background: repeating-linear-gradient(45deg, var(--gold) 0 10px, transparent 10px 20px);
+    opacity: 0.15;
+  }
+  .attraction-img span {
+    position: absolute; bottom: 12px; left: 16px;
+    color: white; font-size: 12px; font-family: 'Work Sans', sans-serif;
+    opacity: 0.75;
+  }
+
+  .attraction-body { padding: 20px 22px; }
+  .attraction-body h3 { font-family: 'Fraunces', serif; font-size: 20px; color: var(--indigo); margin-bottom: 8px; }
+  .attraction-body p { font-size: 14px; color: #5c574d; line-height: 1.6; }
+  .attraction-meta {
+    margin-top: 12px; display: inline-block; font-size: 12px; font-weight: 600;
+    background: #F2EFE4; color: var(--terracotta); padding: 4px 10px; border-radius: 4px;
+  }
+
+  footer { background: var(--indigo); color: white; padding: 32px 48px; display: flex; justify-content: space-between; font-size: 13px; }
+  footer a { color: var(--gold); text-decoration: none; }
+</style>
+</head>
+<body>
+  <div class="stripe"><div class="s1"></div><div class="s2"></div><div class="s3"></div></div>
+
+  <header>
+    <a class="logo" href="design1-market-weave.html">Winneba Visitors Guide</a>
+    <nav>
+      <a href="attractions.html" class="active">Attractions</a>
+      <a href="#">Food & Delivery</a>
+      <a href="#">Hospitals</a>
+      <a href="#">Hostels</a>
+      <a href="#">Find Places</a>
+    </nav>
+  </header>
+
+  <section class="page-hero">
+    <h1>Attractions</h1>
+    <p>The landmarks, beaches, and events that make Winneba worth exploring — start here before you plan your day.</p>
+  </section>
+
+  <main>
+    <div class="attraction-grid">
+
+      <article class="attraction-card">
+        <div class="attraction-img"><span>Photo placeholder</span></div>
+        <div class="attraction-body">
+          <h3>Winneba Beach</h3>
+          <p>A wide, breezy stretch of coastline popular for evening walks, football games, and watching local fishing boats come in.</p>
+          <span class="attraction-meta">Open daily</span>
+        </div>
+      </article>
+
+      <article class="attraction-card">
+        <div class="attraction-img"><span>Photo placeholder</span></div>
+        <div class="attraction-body">
+          <h3>Aboakyer Festival</h3>
+          <p>An annual deer-hunting festival celebrated by the people of Winneba, marked by processions, drumming, and durbar of chiefs.</p>
+          <span class="attraction-meta">Every May</span>
+        </div>
+      </article>
+
+      <article class="attraction-card">
+        <div class="attraction-img"><span>Photo placeholder</span></div>
+        <div class="attraction-body">
+          <h3>Winneba Lagoon</h3>
+          <p>A quiet spot on the edge of town, good for bird-watching and a slower-paced afternoon away from the main streets.</p>
+          <span class="attraction-meta">Open daily</span>
+        </div>
+      </article>
+
+      <article class="attraction-card">
+        <div class="attraction-img"><span>Photo placeholder</span></div>
+        <div class="attraction-body">
+          <h3>Winneba Town Market</h3>
+          <p>The heart of daily life in Winneba — fresh produce, local goods, and a good place to get a feel for the town.</p>
+          <span class="attraction-meta">Mornings recommended</span>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <footer>
+    <span>&copy; 2026 Winneba Visitors Guide</span>
+    <a href="#">References</a>
+  </footer>
+</body>
+</html>
