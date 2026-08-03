@@ -1,0 +1,354 @@
+/* ===================================================================
+   JOBEQS THREAD AND TREND — Site Plan Stylesheet
+   Color Schema:
+     --ivory      #F7F3EA  (page background)
+     --deep-green #1F3B2E  (headings, header/footer, primary buttons)
+     --gold       #C79A2B  (accents, borders, dividers, hover states)
+     --wine       #6E2A3B  (secondary accent, links, highlights)
+     --charcoal   #2A241E  (body text)
+   Typography:
+     Display / headings : "Fraunces"          (serif, editorial, tailored)
+     Body / paragraphs   : "Work Sans"          (clean, modern sans)
+     Accent / slogans    : "Cormorant Garamond" italic (elegant script-like feel)
+=================================================================== */
+
+:root {
+  --ivory: #F7F3EA;
+  --deep-green: #1F3B2E;
+  --deep-green-soft: #2C4E3D;
+  --gold: #C79A2B;
+  --gold-soft: #E7C976;
+  --wine: #6E2A3B;
+  --charcoal: #2A241E;
+  --thread-line: repeating-linear-gradient(
+    90deg,
+    var(--gold) 0px,
+    var(--gold) 10px,
+    transparent 10px,
+    transparent 18px
+  );
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background-color: var(--ivory);
+  color: var(--charcoal);
+  font-family: "Work Sans", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Fraunces", "Georgia", serif;
+  color: var(--deep-green);
+  margin: 0 0 0.5rem 0;
+  letter-spacing: 0.01em;
+}
+
+h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 600; }
+h2 { font-size: clamp(1.4rem, 3vw, 1.9rem); font-weight: 600; }
+h3 { font-size: 1.15rem; font-weight: 600; }
+
+.accent-text {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  color: var(--wine);
+  font-size: 1.3rem;
+}
+
+a { color: var(--wine); }
+a:hover { color: var(--gold); }
+
+.stitch-divider {
+  height: 2px;
+  background: var(--thread-line);
+  border: none;
+  margin: 2.5rem 0;
+}
+
+/* ---------- Top masthead ---------- */
+.masthead {
+  background-color: var(--deep-green);
+  color: var(--ivory);
+  padding: 2.5rem 1.5rem 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.masthead::after {
+  content: "";
+  display: block;
+  height: 6px;
+  background: var(--thread-line);
+  margin-top: 1.75rem;
+}
+
+.masthead .logo-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: var(--gold);
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+.masthead h1 { color: var(--ivory); }
+.masthead p.doc-subtitle {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  color: var(--gold-soft);
+  font-size: 1.25rem;
+  margin-top: 0.25rem;
+}
+
+/* ---------- Layout container ---------- */
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+section.plan-section {
+  margin-bottom: 3rem;
+}
+
+.section-eyebrow {
+  font-family: "Work Sans", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.75rem;
+  color: var(--wine);
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+/* ---------- Site name card ---------- */
+.name-card {
+  background: #fff;
+  border: 1px solid var(--gold-soft);
+  border-left: 6px solid var(--gold);
+  border-radius: 4px;
+  padding: 1.5rem 1.75rem;
+}
+
+.name-card .domain {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-family: monospace;
+  background: var(--ivory);
+  border: 1px dashed var(--gold);
+  padding: 0.25rem 0.6rem;
+  border-radius: 3px;
+  color: var(--deep-green);
+}
+
+/* ---------- Scenarios ---------- */
+.scenario-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.scenario-list li {
+  background: #fff;
+  border: 1px solid #e7dfcf;
+  border-radius: 4px;
+  padding: 1rem 1.25rem;
+  position: relative;
+  padding-left: 3rem;
+}
+
+.scenario-list li::before {
+  content: "?";
+  position: absolute;
+  left: 0.9rem;
+  top: 0.85rem;
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  color: var(--gold);
+  font-size: 1.3rem;
+}
+
+.scenario-list .who {
+  display: block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--wine);
+  margin-bottom: 0.2rem;
+}
+
+/* ---------- Color schema swatches ---------- */
+.swatch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 1.25rem;
+}
+
+.swatch {
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #e2d9c3;
+  background: #fff;
+}
+
+.swatch-color {
+  height: 80px;
+}
+
+.swatch-info {
+  padding: 0.75rem 1rem;
+}
+
+.swatch-info .hex {
+  font-family: monospace;
+  font-weight: 600;
+  display: block;
+}
+
+.swatch-info .usage {
+  font-size: 0.85rem;
+  color: var(--charcoal);
+}
+
+/* ---------- Typography samples ---------- */
+.type-sample {
+  background: #fff;
+  border: 1px solid #e7dfcf;
+  border-radius: 4px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.type-sample .role-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--wine);
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+.type-sample .sample-display {
+  font-family: "Fraunces", serif;
+  font-size: 1.8rem;
+  color: var(--deep-green);
+}
+
+.type-sample .sample-body {
+  font-family: "Work Sans", sans-serif;
+  font-size: 1rem;
+}
+
+.type-sample .sample-accent {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 1.4rem;
+  color: var(--wine);
+}
+
+/* ---------- Wireframes ---------- */
+.wireframe-wrap {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.wireframe {
+  background: #fff;
+  border: 1px solid #e2d9c3;
+  border-radius: 6px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.wireframe h3 { margin-bottom: 0.75rem; }
+
+.frame-desktop {
+  width: 480px;
+  border: 2px solid var(--deep-green);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.frame-mobile {
+  width: 190px;
+  border: 2px solid var(--deep-green);
+  border-radius: 18px;
+  overflow: hidden;
+  padding: 6px 6px 10px;
+  background: var(--deep-green);
+}
+
+.frame-mobile .screen {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.wf-block {
+  border-bottom: 1px dashed #cbbf9d;
+  font-size: 0.7rem;
+  color: var(--deep-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.wf-header { background: var(--deep-green); color: var(--ivory); height: 40px; }
+.wf-nav { background: var(--gold-soft); height: 26px; font-size: 0.62rem; }
+.wf-hero { background: #f1e9d5; height: 90px; flex-direction: column; gap: 4px;}
+.wf-hero span.small { font-size: 0.6rem; color: var(--wine); }
+.wf-grid { background: #fff; height: 70px; display: grid; grid-template-columns: repeat(3,1fr); gap: 4px; padding: 6px; }
+.wf-grid div { background: #f1e9d5; border: 1px solid #e2d9c3; }
+.wf-footer { background: var(--deep-green); color: var(--gold-soft); height: 34px; }
+
+.wf-fab {
+  position: relative;
+}
+.wf-fab .fab-btn {
+  position: absolute;
+  right: 8px;
+  bottom: 10px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--wine);
+  border: 2px solid var(--ivory);
+}
+.wf-fab .fab-btn.call { bottom: 38px; background: var(--gold); }
+
+.frame-mobile .wf-header { height: 34px; }
+.frame-mobile .wf-nav { height: 20px; }
+.frame-mobile .wf-hero { height: 70px; }
+.frame-mobile .wf-grid { grid-template-columns: repeat(2,1fr); height: 90px; }
+.frame-mobile .wf-footer { height: 26px; }
+
+.caption {
+  font-size: 0.8rem;
+  color: var(--charcoal);
+  margin-top: 0.6rem;
+}
+
+footer.doc-footer {
+  background: var(--deep-green);
+  color: var(--gold-soft);
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.85rem;
+}

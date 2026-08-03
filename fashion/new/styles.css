@@ -1,0 +1,371 @@
+/* ===================================================================
+   JOBEQS THREAD AND TREND — Site Plan Stylesheet
+   Color Schema (matched to the JOBEQS logo mark):
+     --white      #FFFFFF  (page background)
+     --off-white  #F7F6F4  (card / section backgrounds)
+     --black      #171414  (headings, header/footer, mannequin-black accents)
+     --red        #C8102E  (primary accent, buttons, thread color)
+     --red-deep   #8C0B20  (hover / pressed states, secondary accent)
+     --silver     #C9C7C4  (dividers, borders, pin/scissor metal accents)
+   Typography:
+     Display / headings : "Fraunces"                     (serif, editorial, tailored)
+     Body / paragraphs   : "Work Sans"                     (clean, modern sans)
+     Accent / slogans    : "Cormorant Garamond" italic     (elegant, quiet flourish)
+=================================================================== */
+
+:root {
+  --white: #FFFFFF;
+  --off-white: #F7F6F4;
+  --black: #171414;
+  --black-soft: #2A2626;
+  --red: #C8102E;
+  --red-deep: #8C0B20;
+  --silver: #C9C7C4;
+  --charcoal: #232020;
+  --thread-line: repeating-linear-gradient(
+    90deg,
+    var(--red) 0px,
+    var(--red) 10px,
+    transparent 10px,
+    transparent 18px
+  );
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background-color: var(--white);
+  color: var(--charcoal);
+  font-family: "Work Sans", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Fraunces", "Georgia", serif;
+  color: var(--black);
+  margin: 0 0 0.5rem 0;
+  letter-spacing: 0.01em;
+}
+
+h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 600; }
+h2 { font-size: clamp(1.4rem, 3vw, 1.9rem); font-weight: 600; }
+h3 { font-size: 1.15rem; font-weight: 600; }
+
+.accent-text {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  color: var(--red-deep);
+  font-size: 1.3rem;
+}
+
+a { color: var(--red); }
+a:hover { color: var(--black); }
+
+.stitch-divider {
+  height: 2px;
+  background: var(--thread-line);
+  border: none;
+  margin: 2.5rem 0;
+}
+
+/* ---------- Top masthead ---------- */
+.masthead {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 2.5rem 1.5rem 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.masthead::after {
+  content: "";
+  display: block;
+  height: 6px;
+  background: var(--thread-line);
+  margin-top: 1.75rem;
+}
+
+.masthead .logo-mark {
+  display: inline-block;
+  width: 96px;
+  height: 96px;
+  margin-bottom: 0.75rem;
+  border-radius: 50%;
+  background: var(--white);
+  border: 3px solid var(--red);
+  padding: 8px;
+  overflow: hidden;
+}
+
+.masthead .logo-mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.masthead h1 { color: var(--white); }
+.masthead p.doc-subtitle {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  color: var(--silver);
+  font-size: 1.25rem;
+  margin-top: 0.25rem;
+}
+
+/* ---------- Layout container ---------- */
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+section.plan-section {
+  margin-bottom: 3rem;
+}
+
+.section-eyebrow {
+  font-family: "Work Sans", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.75rem;
+  color: var(--red-deep);
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+/* ---------- Site name card ---------- */
+.name-card {
+  background: var(--off-white);
+  border: 1px solid var(--silver);
+  border-left: 6px solid var(--red);
+  border-radius: 4px;
+  padding: 1.5rem 1.75rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.name-card .name-card-logo {
+  width: 90px;
+  height: 90px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.name-card .name-card-text { flex: 1; min-width: 220px; }
+
+.name-card .domain {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-family: monospace;
+  background: var(--white);
+  border: 1px dashed var(--red);
+  padding: 0.25rem 0.6rem;
+  border-radius: 3px;
+  color: var(--black);
+}
+
+/* ---------- Scenarios ---------- */
+.scenario-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.scenario-list li {
+  background: var(--off-white);
+  border: 1px solid var(--silver);
+  border-radius: 4px;
+  padding: 1rem 1.25rem;
+  position: relative;
+  padding-left: 3rem;
+}
+
+.scenario-list li::before {
+  content: "?";
+  position: absolute;
+  left: 0.9rem;
+  top: 0.85rem;
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  color: var(--red);
+  font-size: 1.3rem;
+}
+
+.scenario-list .who {
+  display: block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--red-deep);
+  margin-bottom: 0.2rem;
+}
+
+/* ---------- Color schema swatches ---------- */
+.swatch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 1.25rem;
+}
+
+.swatch {
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid var(--silver);
+  background: var(--white);
+}
+
+.swatch-color {
+  height: 80px;
+}
+
+.swatch-info {
+  padding: 0.75rem 1rem;
+}
+
+.swatch-info .hex {
+  font-family: monospace;
+  font-weight: 600;
+  display: block;
+}
+
+.swatch-info .usage {
+  font-size: 0.85rem;
+  color: var(--charcoal);
+}
+
+/* ---------- Typography samples ---------- */
+.type-sample {
+  background: var(--white);
+  border: 1px solid var(--silver);
+  border-radius: 4px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.type-sample .role-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--red-deep);
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+.type-sample .sample-display {
+  font-family: "Fraunces", serif;
+  font-size: 1.8rem;
+  color: var(--black);
+}
+
+.type-sample .sample-body {
+  font-family: "Work Sans", sans-serif;
+  font-size: 1rem;
+}
+
+.type-sample .sample-accent {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 1.4rem;
+  color: var(--red-deep);
+}
+
+/* ---------- Wireframes ---------- */
+.wireframe-wrap {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.wireframe {
+  background: var(--white);
+  border: 1px solid var(--silver);
+  border-radius: 6px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.wireframe h3 { margin-bottom: 0.75rem; }
+
+.frame-desktop {
+  width: 480px;
+  border: 2px solid var(--black);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.frame-mobile {
+  width: 190px;
+  border: 2px solid var(--black);
+  border-radius: 18px;
+  overflow: hidden;
+  padding: 6px 6px 10px;
+  background: var(--black);
+}
+
+.frame-mobile .screen {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.wf-block {
+  border-bottom: 1px dashed var(--silver);
+  font-size: 0.7rem;
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.wf-header { background: var(--black); color: var(--white); height: 40px; }
+.wf-nav { background: #EFEAE6; height: 26px; font-size: 0.62rem; }
+.wf-hero { background: var(--off-white); height: 90px; flex-direction: column; gap: 4px;}
+.wf-hero span.small { font-size: 0.6rem; color: var(--red-deep); }
+.wf-grid { background: var(--white); height: 70px; display: grid; grid-template-columns: repeat(3,1fr); gap: 4px; padding: 6px; }
+.wf-grid div { background: var(--off-white); border: 1px solid var(--silver); }
+.wf-footer { background: var(--black); color: var(--silver); height: 34px; }
+
+.wf-fab {
+  position: relative;
+}
+.wf-fab .fab-btn {
+  position: absolute;
+  right: 8px;
+  bottom: 10px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #25D366; /* WhatsApp brand green, kept for instant recognition */
+  border: 2px solid var(--white);
+}
+.wf-fab .fab-btn.call { bottom: 38px; background: var(--red); }
+
+.frame-mobile .wf-header { height: 34px; }
+.frame-mobile .wf-nav { height: 20px; }
+.frame-mobile .wf-hero { height: 70px; }
+.frame-mobile .wf-grid { grid-template-columns: repeat(2,1fr); height: 90px; }
+.frame-mobile .wf-footer { height: 26px; }
+
+.caption {
+  font-size: 0.8rem;
+  color: var(--charcoal);
+  margin-top: 0.6rem;
+}
+
+footer.doc-footer {
+  background: var(--black);
+  color: var(--silver);
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.85rem;
+}
