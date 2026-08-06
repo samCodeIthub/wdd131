@@ -57,11 +57,13 @@ header .logo img{
 }
 
 header .nav{
-    width: 40em;
+    
+    width: 30em;
     padding-right:20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-right: 50px;
     margin-top: 30px;
 }
 
@@ -69,7 +71,6 @@ header .nav{
     text-decoration: none;
     color: var(--ink);
 }
-
 
 
 main{
@@ -113,14 +114,25 @@ main section{
     border: none;
 }
 
-.intro .map{
+.map {
+    display: inline-block;
+    padding: 10px 16px;
     background-color: var(--terracotta);
     color: var(--sand);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
 }
 
-.intro .browse{
-    border: 2px solid #1B2A4A;
+.intro .browse {
+    display: inline-block;
+    padding: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 2px solid var(--indigo);
     color: var(--indigo);
+    text-decoration: none;
 }
 
 .image img{
@@ -183,11 +195,16 @@ main section{
 
 footer{
     background-color: var(--indigo);
-    height: 50px;
     color: #fff;
     height: 70px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 20px;
+}
+
+
+footer a {
+    text-decoration: none;
+    color: #e5e0d2;
 }

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Samuel Motey Howard || WDDD131 ">
+    <meta name="description" content="Book a local guide in Winneba, Ghana. Choose a guide, pick a date, and get a personalized tour of the town's beaches, culture, and landmarks.">
+    <title>Book a Guide</title>
+    <link rel="stylesheet" href="styles/guide.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="stripe">
+        <div class="s1"></div>
+        <div class="s2"></div>
+        <div class="s3"></div>
+        <div class="s4"></div>
+    </div>
+
+    <header>
+        <div class="logo">
+            <img src="images/fullLogo.svg" alt="Winneba Visitors Guide logo">
+        </div>
+    
+        <div class="nav">
+            <a href="index.html">Home</a>
+            <a href="attraction.html">Attractions</a>
+            <a href="guide.html">Book a Guide</a>
+            <a href="references.html">References</a>
+        </div>
+    </header>
+
+    <main>
+        <h1>Book a Guide</h1>
+        <br>
+        <p>Hire a local guide to show you around Winneba,<br>
+            pick a guide, a date, and tell us what you'd like to see.
+        </p>
+        <br><br>
+
+        <div class="bookingWrap">
+            <form id="bookingForm">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="guideSelect">Choose a Guide</label>
+                <select id="guideSelect" name="guideSelect" required></select>
+
+                <label for="visitDate">Visit Date</label>
+                <input type="date" id="visitDate" name="visitDate" required>
+
+                <label for="groupSize">Number of People</label>
+                <input type="number" id="groupSize" name="groupSize" min="1" max="20" value="1" required>
+
+                <label for="message">Anything specific you'd like to see?</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+
+                <button type="submit">Request Booking</button>
+            </form>
+
+            <div id="formMessage"></div>
+
+            <div id="bookingHistory">
+                <h2>Your Booking Requests</h2>
+                <ul id="bookingList"></ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy;2026 Winneba Visitors Guide</p>
+        <a href="references.html">References</a>
+    </footer>
+
+    <script src="scripts/guide.js" defer></script>
+</body>
+</html>
