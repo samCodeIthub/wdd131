@@ -208,3 +208,23 @@ footer a {
     text-decoration: none;
     color: #e5e0d2;
 }
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: var(--indigo);
+    border-radius: 2px;
+}
